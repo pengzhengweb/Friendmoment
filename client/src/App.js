@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
+
 import jwt_decode from 'jwt-decode';
+
 import {Provider} from 'react-redux';
+
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+
 import './App.css';
 import store from './store';
 
 import PrivateRoute from './common/PrivateRoute';
-import Index from './components/Index';
 import Chats from './components/Chats';
 import Contacts from './components/Contacts';
 import Discover from './components/Discover';
-import Login from './components/Login';
+import Index from './components/Index';
 import Me from './components/Me';
 import Moment from './components/Moment';
 import Publish from './components/Publish';
-import Register from './components/Register';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
 
 
 

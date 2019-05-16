@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+
 import { PropTypes } from 'prop-types';
-import TextFieldGroup from '../common/TextAreaFieldGroup';
+
+import { connect } from 'react-redux';
+
+import { Link} from 'react-router-dom';
+
+import {loginUser} from '../../actions/authActions';
+import TextFieldGroup from '../../common/TextFieldGroup';
+import './Login.css'
 
 class Login extends Component {
   constructor() {
@@ -22,13 +29,13 @@ class Login extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/index");
+      this.props.history.push("/");
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/index");
+      this.props.history.push("/");
     }
 
     if (nextProps.errors) {
@@ -79,6 +86,9 @@ class Login extends Component {
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
+               <Link to="/register">
+                 <button className="btn registerBtn" >|注册账号|</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -88,6 +98,7 @@ class Login extends Component {
 }
 
 Login.propTypes = {
+  loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 }
@@ -97,4 +108,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 })
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps,{loginUser})(Login);

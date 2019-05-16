@@ -64,7 +64,7 @@ router.post('/login', (req, res) => {
   // 查询数据库
   User.findOne({ email }).then(user => {
     if (!user) {
-      return res.status(404).json('用户不存在!');
+      return res.status(404).json({email:'用户不存在!'});
     }
 
     // 密码匹配
@@ -79,7 +79,7 @@ router.post('/login', (req, res) => {
           });
         });
       } else {
-        return res.status(400).json('密码错误!');
+        return res.status(400).json({ password: "密码错误!" });
       }
     });
   });
