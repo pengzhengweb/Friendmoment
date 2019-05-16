@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import jwt_decode from 'jwt-decode';
-
 import {Provider} from 'react-redux';
 
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
