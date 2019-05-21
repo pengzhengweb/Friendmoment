@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import {Provider} from 'react-redux';
 
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom';
 
 import './App.css';
 import store from './store';
@@ -11,7 +11,7 @@ import PrivateRoute from './common/PrivateRoute';
 import Chats from './components/Chats';
 import Contacts from './components/Contacts';
 import Discover from './components/Discover';
-import Index from './components/Index';
+import TabBar from './components/TabBar';
 import Me from './components/Me';
 import Moment from './components/Moment';
 import Publish from './components/Publish';
@@ -26,13 +26,11 @@ import Register from './components/auth/Register';
       <Provider store={store}>
         <Router>
           <div className="App"> 
-            {/* <TabBar /> */}
-            
-            <div className="container">
-              <Switch>
-                <PrivateRoute exact path="/" component={Index} />
-              </Switch>
-             
+            <div >
+              {/* <Switch>
+                <PrivateRoute exact path="/" component={TabBar} />
+              </Switch> */}
+              <Route exact path="/" component={Chats} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
 
@@ -42,7 +40,11 @@ import Register from './components/auth/Register';
               <Route exact path="/contacts" component={Contacts} />
               <Route exact path="/discover" component={Discover} />
               <Route exact path="/moment" component={Moment} />
+              {/* <Route  render={() => <Redirect to='/chats'/>} /> */}
+             
+              
             </div>
+            <TabBar />
           </div>
         </Router>
 

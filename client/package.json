@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:5001",
   "dependencies": {
+    "antd": "^3.18.2",
     "axios": "^0.18.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
