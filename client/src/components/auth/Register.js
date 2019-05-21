@@ -68,7 +68,7 @@ class Register extends Component {
     return (
       <div className="register">
         {/* {user ? user.name : null} */}
-        <div className="container">
+        <div className="">
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">注册</h1>

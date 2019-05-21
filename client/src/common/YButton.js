@@ -1,16 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames';
+import "./YButton.css"
 
-export default class YButton extends Component {
-  static propTypes = {
-    prop: PropTypes
-  }
-
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+const YButton = ({type,disabled,onClick,children}) => {
+  
+  return (
+    <button
+      className={classnames("y-button",{'is-disabled':disabled})}
+      type={type}
+      disadled={disabled}
+      onClick={onClick}
+    >
+     {children}
+    </button>
+  )
 }
+ 
+YButton.propTypes = {
+  type: PropTypes.string,
+  onClick: PropTypes.func.isRequired
+};
+
+export default YButton;
+
+

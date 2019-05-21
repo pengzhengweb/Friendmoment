@@ -40,8 +40,6 @@ import Register from './components/auth/Register';
               <Route exact path="/contacts" component={Contacts} />
               <Route exact path="/discover" component={Discover} />
               <Route exact path="/moment" component={Moment} />
-              {/* <Route  render={() => <Redirect to='/chats'/>} /> */}
-             
               
             </div>
             <TabBar />
