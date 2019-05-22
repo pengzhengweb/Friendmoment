@@ -1,0 +1,35 @@
+.cellWrapper {
+    background-color: #fff;
+    box-sizing: border-box;
+    color: inherit;
+    min-height: 48px;
+    display: flex;
+    justify-content:space-between;
+    font-size: 16px;
+    line-height: 1;
+    overflow: hidden;
+    padding: 0 10px;
+    width: 100%;
+    line-height: 48px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  /* .cellTitle {
+    flex: 1;
+  } */
+  .cellTitle img {
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+  }
+  .cellTitle span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .cell-allow-right {
+    color: #888;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }

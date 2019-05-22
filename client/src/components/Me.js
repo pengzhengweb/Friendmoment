@@ -24,7 +24,7 @@ export default class Me extends Component {
                   </div>}
           </div>
           <div className="btn_wrapper">
-            <YButton onClick={() => this.handleLogout()}>退出登陆</YButton>
+            <YButton onClick={() => this.handleLogout()}>退出登录</YButton>
           </div>
         </div>
       </div>

@@ -1,0 +1,11 @@
+.find {
+    width: 100%;
+    height: calc(100% - 55px);
+    position: relative;
+    box-sizing: border-box;
+  }
+  .content {
+    width: 100%;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+  }
